@@ -41,7 +41,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 cursor-pointer">
-            <img src="/logo.png" alt="HireOrbit" className="h-14 w-auto" />
+            <img src="/logo.png" alt="HireOrbit" className="h-40 w-auto" />
           </Link>
 
           {/* Desktop Menu */}
