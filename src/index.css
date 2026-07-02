@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Satoshi", "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #2563EB;
+  --color-dark: #0F172A;
+  --color-accent: #4F46E5;
+  --color-highlight: #06B6D4;
+  --color-light: #F8FAFC;
+  --color-secondary: #64748B;
+  
+  --color-background: var(--color-dark);
+  --color-foreground: var(--color-light);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-dark);
+    --foreground: var(--color-light);
+  }
+
+  body {
+    @apply bg-dark text-light font-sans antialiased selection:bg-primary/30 selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
+  }
+  .glass-card {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-light via-white to-secondary;
+  }
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-highlight;
+  }
+}
