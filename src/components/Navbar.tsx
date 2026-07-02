@@ -40,13 +40,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <div className="w-8 h-8 bg-gradient-to-tr from-primary to-highlight rounded-lg rotate-12 flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-full"></div>
-            </div>
-            <span className="font-display text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-              HireOrbit
-            </span>
+          <Link to="/" className="flex-shrink-0 cursor-pointer">
+            <img src="/logo.jpeg" alt="HireOrbit" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Menu */}
